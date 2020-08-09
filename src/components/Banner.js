@@ -32,19 +32,11 @@ const Banner = ({ title, fetchUrl }) => {
         <h1 className="bannerHeading">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <h1 className="bannerDescription">{movie?.overview}</h1>
         <div>
-          <NButton
-            className={"bannerButton"}
-            iconClassName={"fas fa-play-circle"}
-            name={"Play"}
-          />
-          <NButton
-            className={"bannerButton"}
-            iconClassName={"fas fa-play-circle"}
-            name={"More Info"}
-          />
+          <NButton className={"bannerButton"} name={"Play"} />
+          <NButton className={"bannerButton"} name={"More Info"} />
         </div>
+        <h1 className="bannerDescription">{movie?.overview}</h1>
       </div>
       <div className="bannerFadeBottom"></div>
     </header>
