@@ -2,6 +2,7 @@
   height: 450px;
   color: white;
   object-fit: contain;
+  margin-bottom: 20px;
 }
 
 .bannerContent {
@@ -10,13 +11,17 @@
   height: 200px;
 }
 
+.bannerHeading {
+  margin-bottom: 10px;
+}
+
 .bannerDescription {
-  width: 45rem;
-  line-height: 1.5;
+  width: 50rem;
+  line-height: 1.1;
   padding-top: 1rem;
-  font-size: 1rem;
-  max-width: 400px;
-  height: 80px;
+  font-size: 0.9rem;
+  max-width: 450px;
+  height: 100px;
 }
 
 .bannerButton {
