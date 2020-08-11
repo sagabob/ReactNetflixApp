@@ -15,7 +15,10 @@ jobs:
           paths:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}'
-      - run: "yarn test"
+
+      - run:
+        name: Install Firebase
+        command: npm install --save-dev firebase-tools
 
       - run:
         name: "Build Project"
