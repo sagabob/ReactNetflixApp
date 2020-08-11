@@ -16,3 +16,11 @@ jobs:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}'
       - run: "yarn test"
+
+      - run:
+        name: "Build Project"
+        command: "yarn build"
+
+      - run:
+        name: "Deploy to Firebase Hosting"
+        command: "./node_modules/.bin/firebase deploy --token=$FIRE_BASE_TOKEN"
