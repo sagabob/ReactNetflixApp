@@ -1,0 +1,10 @@
+.footer {
+  min-height: 200px;
+  color: whitesmoke;
+  border-top: 2px whitesmoke;
+  background-image: linear-gradient(to top left, #453b3b, #111, black);
+}
+
+.footer a {
+  color: white;
+}

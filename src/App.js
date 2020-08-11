@@ -4,6 +4,7 @@ import { Row } from "./components/Row";
 import requests from "./request/request";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 function App() {
   const [trailerUrl, setTrailerUrl] = useState({ row: null, trailerUrl: null });
@@ -30,6 +31,10 @@ function App() {
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+
+      <br />
+
+      <Footer />
     </div>
   );
 }

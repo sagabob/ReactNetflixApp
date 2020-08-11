@@ -5,3 +5,11 @@
 .app {
   background-color: #111;
 }
+
+hr.hr1 {
+  margin: auto;
+  width: 95%;
+  border-top: 1px dashed red;
+  color: black;
+  background-color: black;
+}
