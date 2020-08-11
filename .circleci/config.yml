@@ -11,13 +11,14 @@ jobs:
             - 'v1-dependencies-{{ checksum "package.json" }}'
             - v1-dependencies-
       - run: "yarn install"
+
       - save_cache:
           paths:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}'
 
       - run:
-        name: Install Firebase
+        name: "Install Firebase"
         command: npm install --save-dev firebase-tools
 
       - run:
