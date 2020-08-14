@@ -7,8 +7,8 @@ function Footer() {
       <h3>SagaStore App</h3>
       <br />
       <h5>
-        Project link{" "}
-        <a href="https://github.com/sagabob/ReactNetflixApp">
+        Project source{": "}
+        <a href="https://github.com/sagabob/ReactNetflixApp" target="blank">
           https://github.com/sagabob/ReactNetflixApp
         </a>
       </h5>
