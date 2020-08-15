@@ -30,17 +30,30 @@ function Nav() {
         alt="Netflix Logo"
       />
       <div className="privateLinkNav">
-        {currentUser != null &&
-          routes.map(
-            (route, i) =>
-              route.isNav && (
-                <NavLink to={route.path} activeClassName="is-active">
-                  <button className="navButton">
-                    <span key={i}>{route.label}</span>
-                  </button>
+        {routes.map((route, i) =>
+          currentUser != null
+            ? route.isNav && (
+                <NavLink
+                  to={route.path}
+                  activeClassName="is-active"
+                  key={i}
+                  className="navButton"
+                >
+                  {route.label}
                 </NavLink>
               )
-          )}
+            : !route.isPrivate &&
+              route.isNav && (
+                <NavLink
+                  to={route.path}
+                  activeClassName="is-active"
+                  key={i}
+                  className="navButton"
+                >
+                  {route.label}
+                </NavLink>
+              )
+        )}
       </div>
       <div className="userNav">
         {currentUser != null ? (
@@ -49,11 +62,19 @@ function Nav() {
           </button>
         ) : (
           <>
-            <NavLink to="/signup" activeClassName="is-active">
-              <button className="navButton">Sign In </button>
+            <NavLink
+              to="/signup"
+              activeClassName="is-active"
+              className="navButton"
+            >
+              Sign Up
             </NavLink>
-            <NavLink to="/login" activeClassName="is-active">
-              <button className="navButton">Log In</button>
+            <NavLink
+              to="/login"
+              activeClassName="is-active"
+              className="navButton"
+            >
+              Log In
             </NavLink>
           </>
         )}

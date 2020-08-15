@@ -24,6 +24,7 @@ function App() {
                 />
               ) : (
                 <PrivateRoute
+                  key={i}
                   exact
                   path={route.path}
                   component={route.component}

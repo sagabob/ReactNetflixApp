@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "../auth/base";
+import "./Login.css";
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
@@ -20,16 +21,18 @@ const SignUp = ({ history }) => {
   );
 
   return (
-    <div className="app-container">
-      <h1>Sign up</h1>
-      <br />
-      <form onSubmit={handleSignUp}>
-        <label>Email</label>
-        <input name="email" type="email" placeholder="Email" />
-        <label>Password</label>
-        <input name="password" type="password" placeholder="Password" />
-        <button type="submit">Sign Up</button>
-      </form>
+    <div className="app-container loginWrapper">
+      <div className="login-page">
+        <h2>Sign up</h2>
+        <div className="form">
+          <form onSubmit={handleSignUp}>
+            <input name="username" type="text" placeholder="Username" />
+            <input name="email" type="email" placeholder="Email" />
+            <input name="password" type="password" placeholder="Password" />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

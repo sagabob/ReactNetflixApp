@@ -69,5 +69,5 @@
 }
 
 .is-active {
-  font-weight: 900;
+  background-color: goldenrod;
 }
