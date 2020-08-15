@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Nav.css";
 import { AuthContext } from "../auth/Auth";
-import pRoutes from "../routes/pRoutes";
-import { Link } from "react-router-dom";
+import routes from "../routes/routes";
+import { NavLink } from "react-router-dom";
 import app from "../auth/base";
 
 function Nav() {
@@ -10,7 +10,7 @@ function Nav() {
   const { currentUser } = useContext(AuthContext);
 
   const scrollListner = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
       handleShow(true);
     } else handleShow(false);
   };
@@ -31,27 +31,30 @@ function Nav() {
       />
       <div className="privateLinkNav">
         {currentUser != null &&
-          pRoutes.map((route, i) => (
-            <Link to={route.path}>
-              <button className="bannerButton">
-                <span key={i}>{route.label}</span>
-              </button>
-            </Link>
-          ))}
+          routes.map(
+            (route, i) =>
+              route.isNav && (
+                <NavLink to={route.path} activeClassName="is-active">
+                  <button className="navButton">
+                    <span key={i}>{route.label}</span>
+                  </button>
+                </NavLink>
+              )
+          )}
       </div>
       <div className="userNav">
         {currentUser != null ? (
-          <button onClick={() => app.auth().signOut()} className="bannerButton">
+          <button onClick={() => app.auth().signOut()} className="navButton">
             Sign Out
           </button>
         ) : (
           <>
-            <Link to="/signup">
-              <button className="bannerButton">Sign In </button>
-            </Link>
-            <Link to="/login">
-              <button className="bannerButton">Log In</button>
-            </Link>
+            <NavLink to="/signup" activeClassName="is-active">
+              <button className="navButton">Sign In </button>
+            </NavLink>
+            <NavLink to="/login" activeClassName="is-active">
+              <button className="navButton">Log In</button>
+            </NavLink>
           </>
         )}
       </div>

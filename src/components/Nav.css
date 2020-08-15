@@ -18,7 +18,7 @@
 .navLogo {
   position: fixed;
   left: 20px;
-  width: 80px;
+  width: 100px;
   object-fit: contain;
 }
 
@@ -46,4 +46,28 @@
 .privateLinkNav a {
   text-decoration: none;
   color: white;
+}
+
+.navButton {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.3);
+}
+.navButton:hover {
+  color: #111;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+
+.is-active {
+  font-weight: 900;
 }

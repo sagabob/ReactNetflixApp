@@ -15,16 +15,22 @@ function App() {
         <div className="app">
           <Nav />
           <Switch>
-            {routes.map((route, i) => (
-              <Route
-                key={i}
-                exact
-                path={route.path}
-                component={route.component}
-              />
-            ))}
-
-            <PrivateRoute exact path="/mylist" component={MyList} />
+            {routes.map((route, i) =>
+              !route.isPrivate ? (
+                <Route
+                  key={i}
+                  exact
+                  path={route.path}
+                  component={route.component}
+                />
+              ) : (
+                <PrivateRoute
+                  exact
+                  path={route.path}
+                  component={route.component}
+                />
+              )
+            )}
           </Switch>
           <Footer />
         </div>
