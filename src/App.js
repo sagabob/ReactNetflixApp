@@ -6,7 +6,6 @@ import { AuthProvider } from "./auth/Auth";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoute";
 
-import MyList from "./pages/MyList";
 import routes from "./routes/routes";
 function App() {
   return (
