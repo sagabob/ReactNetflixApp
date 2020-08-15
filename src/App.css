@@ -2,6 +2,9 @@
   margin: 0;
 }
 
+body {
+  background-color: #111;
+}
 .app {
   background-color: #111;
 }
@@ -12,4 +15,12 @@ hr.hr1 {
   border-top: 1px dashed red;
   color: black;
   background-color: black;
+}
+
+.app-container {
+  height: 400px;
+  color: white;
+  object-fit: contain;
+  margin-bottom: 20px;
+  margin-top: 100px;
 }

@@ -28,3 +28,22 @@
   width: 30px;
   object-fit: contain;
 }
+
+.userNav {
+  position: fixed;
+  right: 100px;
+}
+
+.userNav a {
+  text-decoration: none;
+}
+
+.privateLinkNav {
+  position: fixed;
+  left: 200px;
+}
+
+.privateLinkNav a {
+  text-decoration: none;
+  color: white;
+}
