@@ -22,3 +22,12 @@ jobs:
       - run: "npm run build"
 
       - run: "./node_modules/.bin/firebase deploy --token=$FIRE_BASE_TOKEN"
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: demo
