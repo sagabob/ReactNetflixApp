@@ -1,5 +1,5 @@
 .banner {
-  height: 450px;
+  height: 650px;
   color: white;
   object-fit: contain;
   margin-bottom: 20px;
@@ -8,7 +8,7 @@
 .bannerContent {
   margin-left: 30px;
   padding-top: 140px;
-  height: 200px;
+  height: 300px;
 }
 
 .bannerHeading {
@@ -44,17 +44,7 @@
   transition: all 0.2s;
 }
 .bannerFadeBottom {
-  height: 7.4rem;
-  background-image: linear-gradient(
-    180deg,
-    transparent,
-    rgba(37, 37, 37, 0.61),
-    #111
-  );
-}
-
-.bannerFadeBottomAlt {
-  height: 1.4rem;
+  height: 220px;
   background-image: linear-gradient(
     180deg,
     transparent,

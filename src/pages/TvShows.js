@@ -1,11 +1,11 @@
 import React from "react";
 
-const MyList = () => {
+const TvShows = () => {
   return (
     <div className="app-container">
-      <h1>My List</h1>
+      <h1>Tv Shows</h1>
     </div>
   );
 };
 
-export default MyList;
+export default TvShows;

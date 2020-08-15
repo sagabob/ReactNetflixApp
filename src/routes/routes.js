@@ -1,13 +1,29 @@
-import Home from "../pages/Home";
+import HomeAlt from "../pages/HomeAlt";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import MyList from "../pages/MyList";
+import Movies from "../pages/Movies";
+import TvShows from "../pages/TvShows";
 const routes = [
   {
     path: "/",
-    component: Home,
+    component: HomeAlt,
     isPrivate: false,
     label: "Home",
+    isNav: true,
+  },
+  {
+    path: "/movies",
+    component: Movies,
+    isPrivate: false,
+    label: "Movies",
+    isNav: true,
+  },
+  {
+    path: "/tvshows",
+    component: TvShows,
+    isPrivate: false,
+    label: "Tv Shows",
     isNav: true,
   },
   {
