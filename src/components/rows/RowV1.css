@@ -1,0 +1,41 @@
+.rowWrapper {
+  margin-left: 20px;
+  color: white;
+}
+
+.rowContainer {
+  display: flex;
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+
+.rowWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+}
+
+.imageImage {
+  display: block;
+  max-width: 100%;
+}
+.rowContainer:focus-within .item,
+.rowContainer:hover .item {
+  transform: translateX(-25%);
+}
+
+.item:focus ~ .item,
+.item:hover ~ .item {
+  transform: translateX(25%);
+}
+
+.rowContainer .item:focus,
+.rowContainer .item:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
