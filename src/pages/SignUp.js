@@ -23,7 +23,7 @@ const SignUp = ({ history }) => {
   return (
     <div className="app-container loginWrapper">
       <div className="login-page">
-        <h2>Sign up</h2>
+        <h2 className="sign">Sign up</h2>
         <div className="form">
           <form onSubmit={handleSignUp}>
             <input name="username" type="text" placeholder="Username" />

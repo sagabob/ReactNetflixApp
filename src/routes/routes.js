@@ -1,4 +1,4 @@
-import HomeAlt from "../pages/HomeAlt";
+import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import MyList from "../pages/MyList";
@@ -7,7 +7,7 @@ import TvShows from "../pages/TvShows";
 const routes = [
   {
     path: "/",
-    component: HomeAlt,
+    component: Home,
     isPrivate: false,
     label: "Home",
     isNav: true,

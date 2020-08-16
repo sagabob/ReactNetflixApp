@@ -5,10 +5,13 @@
   padding: 20px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .loginWrapper {
   background-image: url("https://i.imgur.com/SYJqBJN.jpg");
   background-size: cover;
+  opacity: 0.7;
 }
+
 .sign {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
@@ -16,6 +19,7 @@
   text-align: center;
   color: white;
 }
+
 .form {
   position: relative;
   z-index: 1;
