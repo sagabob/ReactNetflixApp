@@ -111,6 +111,5 @@ Code is from https://github.com/anthonykrivonos/flix-carousel/blob/master/src/ca
 }
 
 .tile__large {
-  width: 120px;
   max-height: 300px;
 }
