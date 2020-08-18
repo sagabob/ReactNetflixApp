@@ -1,4 +1,6 @@
-/* Global Variables */
+/* Global Variables 
+Code is from https://github.com/anthonykrivonos/flix-carousel/blob/master/src/carousel.css
+*/
 :root {
   /* Tile Dimensions */
   --carousel-tile-spacing: 10px;
