@@ -47,7 +47,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #ed4545;
+  background: #f22613;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -61,7 +61,7 @@
 .form button:hover,
 .form button:active,
 .form button:focus {
-  background: #b50b0b;
+  background: #c91f37;
 }
 .form a.signupButton {
   text-decoration: none;

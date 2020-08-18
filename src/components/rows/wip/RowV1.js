@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "../../request/axios";
-import BASE_URL from "../../request/constant";
+import axios from "../../../request/axios";
+import BASE_URL from "../../../request/constant";
 
-import "./Row.css";
+import "./RowV1.css";
 
-/*
-From version 2
-*/
-
-export const Row = ({ title, fetchUrl, isLargeSize }) => {
+export const RowV1 = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -34,32 +30,26 @@ export const Row = ({ title, fetchUrl, isLargeSize }) => {
   const handleImageClick = (movie) => {};
 
   return (
-    <div className="carousel">
+    <div className="row">
       <h2>{title}</h2>
-      <div className="carousel-row">
+      <div className="row__inner">
         {movies.map(
           (movie, index) =>
             movie.backdrop_path !== "" &&
             movie.backdrop_path != null &&
             movie.poster_path !== "" &&
             movie.poster_path != null && (
-              <div
-                key={index}
-                className={
-                  isLargeSize ? "carousel-tile tile__large" : "carousel-tile"
-                }
-              >
+              <div className="tile" key={index}>
                 <div className="tile__media">
                   <img
                     onClick={() => handleImageClick(movie)}
-                    src={
-                      isLargeSize
-                        ? `${BASE_URL}${movie.poster_path}`
-                        : `${BASE_URL}${movie.backdrop_path}`
-                    }
+                    src={`${BASE_URL}${movie.backdrop_path}`}
                     alt={getValidMovieName(movie)}
                     className="tile__img"
                   />
+                </div>
+                <div class="tile__details">
+                  <div class="tile__title">{getValidMovieName(movie)}</div>
                 </div>
               </div>
             )

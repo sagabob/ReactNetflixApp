@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "../../request/axios";
-import BASE_URL from "../../request/constant";
+import axios from "../../../request/axios";
+import BASE_URL from "../../../request/constant";
 
-import "./Row.css";
+import "./RowV2.css";
 
-/*
-From version 2
-*/
-
-export const Row = ({ title, fetchUrl, isLargeSize }) => {
+export const RowV2 = ({ title, fetchUrl, isLargeSize }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
