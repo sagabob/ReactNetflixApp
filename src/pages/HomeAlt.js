@@ -2,15 +2,13 @@ import React from "react";
 import { withRouter } from "react-router";
 import { Row } from "../components/rows/Row";
 import requests from "../request/request";
-import Banner from "../components/Banner";
+import Banner from "../components/banner/BannerV1";
+import slides from "../components/banner/sample";
 
 function Home() {
   return (
     <div>
-      <Banner
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-      />
+      <Banner slides={slides} />
       <Row
         isLargeSize={true}
         title="NETFLIX ORIGINALS"
