@@ -31,7 +31,9 @@ export const Row = ({ title, fetchUrl, isLargeSize }) => {
     return "";
   }
 
-  const handleImageClick = (movie) => {};
+  const handleImageClick = (movie) => {
+    console.log(movie);
+  };
 
   return (
     <div className="carousel">

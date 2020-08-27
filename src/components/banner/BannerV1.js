@@ -1,5 +1,6 @@
 import React from "react";
 import "./BannerV1.css";
+
 var classNames = require("classnames");
 
 export default class BannerV1 extends React.Component {
@@ -61,8 +62,8 @@ export default class BannerV1 extends React.Component {
                   {slide.country || slide.city}
                 </h3>
                 <h2 className="slider__slide-heading">
-                  {slide.city.split("").map((l) => (
-                    <span>{l}</span>
+                  {slide.city.split("").map((l, index) => (
+                    <span key={index}>{l}</span>
                   ))}
                 </h2>
                 <p className="slider__slide-readmore">read more</p>

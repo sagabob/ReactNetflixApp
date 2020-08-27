@@ -1,4 +1,4 @@
-import Home from "../pages/HomeAlt";
+import Home from "../pages/HomeDev";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import MyList from "../pages/MyList";
