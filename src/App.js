@@ -6,7 +6,7 @@ import { AuthProvider } from "./auth/Auth";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoute";
 
-import routes from "./routes/routes";
+import routes from "./routes/Routes";
 function App() {
   return (
     <AuthProvider>

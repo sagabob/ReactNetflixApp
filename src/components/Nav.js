@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Nav.css";
 import { AuthContext } from "../auth/Auth";
-import routes from "../routes/routes";
+import routes from "../routes/Routes";
 import { NavLink } from "react-router-dom";
 import app from "../auth/base";
 

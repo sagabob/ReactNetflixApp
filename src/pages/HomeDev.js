@@ -1,13 +1,12 @@
 import React from "react";
 import { withRouter } from "react-router";
-
 import Banner from "../components/banner/BannerV2";
-import slides from "../components/banner/sample";
+import requests from "../request/request";
 
 function Home() {
   return (
     <div>
-      <Banner slides={slides} />
+      <Banner fetchUrl={requests.fetchNetflixOriginals} />
 
       <br />
     </div>

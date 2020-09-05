@@ -1,11 +1,13 @@
 import React from "react";
 import "./BannerV2.css";
 import { useState, useEffect } from "react";
+import axios from "../../request/axios";
+import BASE_URL from "../../request/constant";
 var classNames = require("classnames");
 
-const BannerV2 = ({ slides }) => {
+const BannerV2 = ({ fetchUrl }) => {
   const IMAGE_PARTS = 4;
-  const AUTOCHANGE_TIME = 4000;
+  const AUTOCHANGE_TIME = 5000;
 
   let changeTO = null;
 
@@ -13,13 +15,22 @@ const BannerV2 = ({ slides }) => {
   const [prevSlide, setPrevSlide] = useState(-1);
   const [sliderReady, setSliderReady] = useState(false);
 
+  const [movie, setMovie] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(fetchUrl);
+      setMovie(request.data.results);
+
+      return request;
+    }
+    fetchData();
+  }, [fetchUrl]);
+
   function changeSlides(change) {
     window.clearTimeout(changeTO);
-    const length = slides.length;
+    const length = movie.length;
     const prevSlideValue = activeSlide;
-    let activeSlideValue = prevSlideValue + change;
-    if (activeSlideValue < 0) activeSlideValue = length - 1;
-    if (activeSlideValue >= length) activeSlideValue = 0;
+    let activeSlideValue = (prevSlideValue + change + length) % length;
 
     setActiveSlide(activeSlideValue);
     setPrevSlide(prevSlideValue);
@@ -43,32 +54,31 @@ const BannerV2 = ({ slides }) => {
   });
 
   function GetImageWithIndex(index, i) {
-    const listLength = slides.length;
+    const listLength = movie.length;
 
     const newIndex = (index + i) % listLength;
 
-    return slides[newIndex].img;
+    return `${BASE_URL}${movie[newIndex]?.poster_path}`;
   }
 
   return (
     <div className={classNames("slider", { "s--ready": sliderReady })}>
       <div className="slider__slides">
-        {slides.map((slide, index) => (
+        {movie.map((slide, index) => (
           <div
             className={classNames("slider__slide", {
               "s--active": activeSlide === index,
               "s--prev": prevSlide === index,
             })}
-            key={slide.city}
+            key={index}
           >
             <div className="slider__slide-parts">
               {[...Array(IMAGE_PARTS).fill()].map((x, i) => (
                 <div className="slider__slide-part" key={i}>
-                  <div
+                  <img
+                    alt={slide.title}
                     className="slider__slide-part-inner"
-                    style={{
-                      backgroundImage: `url(${slide.img})`,
-                    }}
+                    src={GetImageWithIndex(index, i)}
                   />
                 </div>
               ))}

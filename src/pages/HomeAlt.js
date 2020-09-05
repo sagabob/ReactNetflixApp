@@ -3,12 +3,11 @@ import { withRouter } from "react-router";
 import { Row } from "../components/rows/Row";
 import requests from "../request/request";
 import Banner from "../components/banner/BannerV2";
-import slides from "../components/banner/sample";
 
 function Home() {
   return (
     <div>
-      <Banner slides={slides} />
+      <Banner fetchUrl={requests.fetchNetflixOriginals} />
       <Row
         isLargeSize={true}
         title="NETFLIX ORIGINALS"
