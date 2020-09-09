@@ -3,7 +3,7 @@ import { withRouter } from "react-router";
 import { Row } from "../components/rows/Row";
 import requests from "../request/request";
 import Banner from "../components/Banner";
-
+import BannerRow from "../components/banner/BannerRow";
 function Home() {
   return (
     <div>
@@ -16,7 +16,7 @@ function Home() {
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <BannerRow fetchUrl={requests.fetchTrending} title="TRENDING NOW" />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={requests.fetchAcionMovies} />
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />

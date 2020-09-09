@@ -2,22 +2,28 @@ import React from "react";
 import { withRouter } from "react-router";
 import { Row } from "../components/rows/Row";
 import requests from "../request/request";
-import Banner from "../components/banner/BannerV2";
+import BannerRow from "../components/banner/BannerRow";
+import Banner from "../components/Banner";
 
 function Home() {
   return (
-    <div>
-      <Banner fetchUrl={requests.fetchNetflixOriginals} />
+    <>
+      <Banner
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
+
       <Row
         isLargeSize={true}
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <BannerRow fetchUrl={requests.fetchTrending} title="Trending Now" />
+
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
 
       <br />
-    </div>
+    </>
   );
 }
 

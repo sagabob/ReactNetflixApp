@@ -1,7 +1,22 @@
+.slider__wrap {
+  margin: 0;
+  box-sizing: border-box;
+  width: 96%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: white;
+  padding: 20px;
+}
+
+.slider__area {
+  white-space: nowrap;
+  margin-left: 50px;
+  margin-top: 20px;
+}
 .slider {
   overflow: hidden;
   position: relative;
-  height: 650px;
+  height: 550px;
   color: #fff;
 }
 
@@ -51,7 +66,7 @@
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  object-fit: cover;
 }
 
 .slider__slide-part:nth-child(1) .slider__slide-part-inner {

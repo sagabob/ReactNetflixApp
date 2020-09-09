@@ -1,11 +1,11 @@
 import React from "react";
-import "./BannerV2.css";
+import "./BannerRow.css";
 import { useState, useEffect } from "react";
 import axios from "../../request/axios";
 import BASE_URL from "../../request/constant";
 var classNames = require("classnames");
 
-const BannerV2 = ({ fetchUrl }) => {
+const BannerRow = ({ fetchUrl, title }) => {
   const IMAGE_PARTS = 4;
   const AUTOCHANGE_TIME = 5000;
 
@@ -62,37 +62,42 @@ const BannerV2 = ({ fetchUrl }) => {
   }
 
   return (
-    <div className={classNames("slider", { "s--ready": sliderReady })}>
-      <div className="slider__slides">
-        {movie.map((slide, index) => (
-          <div
-            className={classNames("slider__slide", {
-              "s--active": activeSlide === index,
-              "s--prev": prevSlide === index,
-            })}
-            key={index}
-          >
-            <div className="slider__slide-parts">
-              {[...Array(IMAGE_PARTS).fill()].map((x, i) => (
-                <div className="slider__slide-part" key={i}>
-                  <img
-                    alt={slide.title}
-                    className="slider__slide-part-inner"
-                    src={GetImageWithIndex(index, i)}
-                  />
+    <div className="slider__wrap">
+      <h2>{title}</h2>
+      <div className="slider__area">
+        <div className={classNames("slider", { "s--ready": sliderReady })}>
+          <div className="slider__slides">
+            {movie.map((slide, index) => (
+              <div
+                className={classNames("slider__slide", {
+                  "s--active": activeSlide === index,
+                  "s--prev": prevSlide === index,
+                })}
+                key={index}
+              >
+                <div className="slider__slide-parts">
+                  {[...Array(IMAGE_PARTS).fill()].map((x, i) => (
+                    <div className="slider__slide-part" key={i}>
+                      <img
+                        alt={slide.title}
+                        className="slider__slide-part-inner"
+                        src={GetImageWithIndex(index, i)}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        ))}
+          <div className="slider__control" onClick={() => changeSlides(-1)} />
+          <div
+            className="slider__control slider__control--right"
+            onClick={() => changeSlides(1)}
+          />
+        </div>
       </div>
-      <div className="slider__control" onClick={() => changeSlides(-1)} />
-      <div
-        className="slider__control slider__control--right"
-        onClick={() => changeSlides(1)}
-      />
     </div>
   );
 };
 
-export default BannerV2;
+export default BannerRow;
