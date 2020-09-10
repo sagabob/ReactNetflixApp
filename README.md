@@ -53,7 +53,7 @@ The application will be extended with the following features
 
 ## Continuous Development Delivery
 The application is built with CircleCI and deployed to Firebase. Here is the [link](https://saga-netflix.web.app/)<br/> 
-[![Deployment Status](https://circleci.com/gh/sagabob/ReactNetflixApp.svg?style=svg)](https://circleci.com/gh/sagabob/ReactNetflixApp.svg?style=svg)
+[![Deployment Status](https://circleci.com/gh/sagabob/ReactNetflixApp/tree/demo.svg?style=svg)](https://circleci.com/gh/sagabob/ReactNetflixApp/tree/demo.svg?style=svg)
 
 ## Contact
 [![LinkedIn][linkedin-shield]][linkedin-url]<br/>
