@@ -52,7 +52,7 @@ The application will be extended with the following features
 * Redesign row item so it can be more compact (similar to the one from https://www.animelab.com/).
 
 ## Continuous Development Delivery
-The application is built with CircleCI and deployed to Firebase. 
+The application is built with CircleCI and deployed to Firebase. Here is the [link](https://saga-netflix.web.app/) 
 
 ## Contact
 [![LinkedIn][linkedin-shield]][linkedin-url]<br/>
