@@ -12,7 +12,7 @@ function Footer() {
           https://github.com/sagabob/ReactNetflixApp
         </a>
       </h5>
-      <h5>Version: 2.0</h5>
+      <h5>Version: 2.1</h5>
       <br />
     </footer>
   );
