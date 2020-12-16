@@ -4,6 +4,7 @@ import { AuthContext } from "../auth/Auth";
 import routes from "../routes/PublicRoutes";
 import { NavLink } from "react-router-dom";
 import app from "../auth/base";
+import  Netflix_2015_logo from "../Netflix_2015_logo.svg";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -26,7 +27,7 @@ function Nav() {
     <div className={show ? "nav navBlack" : "nav"}>
       <img
         className="navLogo"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png"
+        src={Netflix_2015_logo}
         alt="Netflix Logo"
       />
       <div className="privateLinkNav">
