@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../request/axios";
-import BASE_URL from "../../request/constant";
+import BASE_IMAGE_URL from "../../request/constant";
 
 import "./Row.css";
 
@@ -31,9 +31,7 @@ export const Row = ({ title, fetchUrl, isLargeSize }) => {
     return "";
   }
 
-  const handleImageClick = (movie) => {
-    console.log(movie);
-  };
+  const handleImageClick = (movie) => {};
 
   return (
     <div className="carousel">
@@ -56,8 +54,8 @@ export const Row = ({ title, fetchUrl, isLargeSize }) => {
                     onClick={() => handleImageClick(movie)}
                     src={
                       isLargeSize
-                        ? `${BASE_URL}${movie.poster_path}`
-                        : `${BASE_URL}${movie.backdrop_path}`
+                        ? `${BASE_IMAGE_URL}${movie.poster_path}`
+                        : `${BASE_IMAGE_URL}${movie.backdrop_path}`
                     }
                     alt={getValidMovieName(movie)}
                     className="tile__img"
