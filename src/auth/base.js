@@ -2,12 +2,12 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyCWb8fqyDDQekk2Bo8XixIsx7p0l2NFbkM",
-  authDomain: "saga-netflix.firebaseapp.com",
-  databaseURL: "https://saga-netflix.firebaseio.com",
-  projectId: "saga-netflix",
-  storageBucket: "saga-netflix.appspot.com",
-  messagingSenderId: "565535460582",
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_FIREBASE_AUTH_DOMAIN}`,
+  databaseURL: `${process.env.REACT_APP_FIREBASE_DATABASE_URL}`,
+  projectId: `${process.env.REACT_APP_FIREBASE_STORAGEBUCKET}`,
+  storageBucket: `${process.env.REACT_APP_FIREBASE_STORAGEBUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_FIREBASE_MESSAGING_SENDERID}`,
 });
 
 export const auth = firebase.auth();
