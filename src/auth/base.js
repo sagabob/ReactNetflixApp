@@ -2,12 +2,12 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyB7EQYJ2q63g4_HlXGdpqaUaMT9w7Xrng4",
-  authDomain: "saga-auth-5deba.firebaseapp.com",
-  databaseURL: "https://saga-auth-5deba.firebaseio.com",
-  projectId: "saga-auth-5deba",
-  storageBucket: "saga-auth-5deba.appspot.com",
-  messagingSenderId: "383765389677",
+  apiKey: "AIzaSyCWb8fqyDDQekk2Bo8XixIsx7p0l2NFbkM",
+  authDomain: "saga-netflix.firebaseapp.com",
+  databaseURL: "https://saga-netflix.firebaseio.com",
+  projectId: "saga-netflix",
+  storageBucket: "saga-netflix.appspot.com",
+  messagingSenderId: "565535460582",
 });
 
 export const auth = firebase.auth();
